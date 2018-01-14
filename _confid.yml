@@ -1,0 +1,8 @@
+plugins:
+  - jekyll-seo-tag
+
+title: Sahej Seli
+email: sehaj.seli@gmail.com
+description: > 
+  Know Sahej Seli
+url: "http://sahejseli.github.io"
