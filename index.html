@@ -224,7 +224,82 @@
 				</div>
 			  </div>
 		</div>
-		<script></script>
+		<script>
+			window.onscroll = function() {scrollFunction()};
+
+			function scrollFunction() {
+				if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+					document.getElementById("myBtn").style.display = "block";
+				} else {
+					document.getElementById("myBtn").style.display = "none";
+				}
+			}
+			function topFunction() {
+				document.body.scrollTop = 0;
+				document.documentElement.scrollTop = 0;
+			}
+			
+			var modal;
+			function openModal() {				
+			  modal = document.getElementById('myModal');
+			  modal.style.display = "block";			  
+			  document.getElementById('top').style.visibility = "hidden";
+			}
+
+			var slideIndex = 1;
+			showSlides(slideIndex);
+
+			function plusSlides(n) {
+			  showSlides(slideIndex += n);
+			}
+
+			function currentSlide(n) {
+			  showSlides(slideIndex = n);
+			}
+
+			function showSlides(n) {
+			  var i;
+			  var slides = document.getElementsByClassName("mySlides");
+			  var dots = document.getElementsByClassName("demo");
+			  if (n > slides.length) {slideIndex = 1}
+			  if (n < 1) {slideIndex = slides.length}
+			  for (i = 0; i < slides.length; i++) {
+				  slides[i].style.display = "none";
+			  }
+			  for (i = 0; i < dots.length; i++) {
+				  dots[i].className = dots[i].className.replace(" active", "");
+			  }
+			  slides[slideIndex-1].style.display = "block";
+			  dots[slideIndex-1].className += " active";
+			}
+			function number(n){
+				var img=null;
+				var modalImg=null;
+				modal=null;
+				if(n==1){		
+					modal = document.getElementById('myModal1');
+					img = document.getElementById('myImg1');
+					modalImg = document.getElementById("img01");
+					}
+				if(n==2){
+					modal = document.getElementById('myModal2');
+					img = document.getElementById('myImg2');
+					modalImg = document.getElementById("img02");
+					}
+				modal.style.display = "block";
+				modalImg.src = img.src;
+				document.getElementById('top').style.visibility = "hidden";
+			}			
+
+			var span = document.getElementsByClassName("close")[0];
+
+			function closeModal() {
+				modal.style.display = "none";
+				document.getElementById('top').style.visibility = "visible";
+			}
+			
+			
+		</script>
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
