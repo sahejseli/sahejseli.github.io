@@ -50,10 +50,10 @@ a:hover {
 	color: #fd191d;
 	text-decoration: none
 }
-img {
+amp-img {
 	border-radius: .4rem
 }
-img.hover-shadow {
+amp-img.hover-shadow {
 	transition: .3s
 }
 .hover-shadow:hover {
