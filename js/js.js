@@ -21,7 +21,6 @@ function currentSlide(e) {
 function showSlides(e) {
 	var l, n = document.getElementsByClassName("mySlides"),
 	for (e > n.length && (slideIndex = 1), 1 > e && (slideIndex = n.length), l = 0; l < n.length; l++) n[l].style.display = "none";
-	for (l = 0; l < t.length; l++) t[l].className = t[l].className.replace(" active", "");
 	n[slideIndex - 1].style.display = "block";
 }
 
