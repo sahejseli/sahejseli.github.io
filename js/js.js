@@ -19,9 +19,14 @@ function currentSlide(e) {
 }
 
 function showSlides(e) {
-	var l, n = document.getElementsByClassName("mySlides"),
-	for (e > n.length && (slideIndex = 1), 1 > e && (slideIndex = n.length), l = 0; l < n.length; l++) n[l].style.display = "none";
-	n[slideIndex - 1].style.display = "block";
+	  var i;
+	  var l = document.getElementsByClassName("mySlides");
+	  if (e > l.length) {slideIndex = 1}
+	  if (e < 1) {slideIndex = l.length}
+	  for (i = 0; i < l.length; i++) {
+	      l[i].style.display = "none";
+	  }
+	  l[slideIndex-1].style.display = "block";
 }
 
 function number(e) {
