@@ -5,14 +5,16 @@
 	<amp-analytics type="googleanalytics">
 	    <script type="application/json">
 	    {
-	      "vars": {
-		"apid": "UA-112410641-1",
-		"apv": "1.0",
-		"apn": "Sahej Seli",
-		"section": "Portfolio",
-		"segA": "Sahej",
-		"segB": "Google AMP"
-	      }
+		  "vars": {
+		    "account": "UA-112410641-1"
+		  },
+		  "triggers": {
+		    "trackPageview": {
+		      "on": "visible",
+		      "request": "pageview"
+		    }
+		  }
+		
 	    }
 	    </script>
 	</amp-analytics>
