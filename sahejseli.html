@@ -2,22 +2,6 @@
 <html amp>
 
 <head>
-	<amp-analytics type="googleanalytics">
-	    <script type="application/json">
-	    {
-		  "vars": {
-		    "account": "UA-112410641-1"
-		  },
-		  "triggers": {
-		    "trackPageview": {
-		      "on": "visible",
-		      "request": "pageview"
-		    }
-		  }
-		
-	    }
-	    </script>
-	</amp-analytics>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
@@ -47,6 +31,22 @@
 </head>
 
 <body>
+	<amp-analytics type="googleanalytics">
+		<script type="application/json">
+		    {
+				"vars": {
+					"account": "UA-112410641-1"
+				},
+				"triggers": {
+					"trackPageview": {
+						"on": "visible",
+						"request": "pageview"
+					}
+				}
+
+			}
+		</script>
+	</amp-analytics>
 	<amp-sidebar id="sidebar" class="cid-qJ9i030SfD" layout="nodisplay" side="right">
 		<div class="builder-sidebar" id="builder-sidebar">
 			<button on="tap:sidebar.close" class="close-sidebar"> <span></span>  <span></span> 
